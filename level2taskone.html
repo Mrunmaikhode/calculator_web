@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+  <style>
+    body{background-color:rgb(63, 157, 246);}
+  </style>
+
+  <div class="container" >
+    <div class="calculator">
+      <form>
+        <div class="display">
+          <input type="text" id="display" >
+        </div>
+      <div class="colo">
+        <input type="button" value="(" class="ope" onclick="display.value += '(' ">
+        <input type="button" value=")" onclick="display.value += ')' ">
+        <input type="button" value="ans" class="ans" onclick="display.value = eval(display.value)">
+        <input type="button" value="del" onclick="display.value = display.value.toString().slice(0,-1)">
+        <input type="button" value="clear"onclick="display.value = '' ">
+      </div>
+      <div>
+        <input type="button" value="7"class="num7" onclick="display.value += '7' ">
+        <input type="button" value="8"class="num8" onclick="display.value += '8' ">
+        <input type="button" value="9" class="num9" onclick="display.value += '9' ">
+        <input type="button" value="%" onclick="display.value += '%' ">
+        <input type="button" value="&radic;" class="ope" onclick="display.value = Math.sqrt(display.value)">
+      </div>
+      <div>
+        <input type="button" value="4" class="num4"  onclick="display.value += '4' ">
+        <input type="button" value="5" class="num5" onclick="display.value += '5' ">
+        <input type="button" value="6" class="num6"  onclick="display.value += '6' ">
+        <input type="button" value="*"  onclick="display.value += '*' ">
+        <input type="button" value="/"  onclick="display.value += '/' ">
+      </div>
+      <div>
+        <input type="button" value="1" class="num1" onclick="display.value += '1' ">
+        <input type="button" value="2" class="num2" onclick="display.value += '2' ">
+        <input type="button" value="3" class="num3" onclick="display.value += '3' ">
+        <input type="button" value="+"  onclick="display.value += '+' ">
+        <input type="button" value="-"  onclick="display.value += '-' ">
+      </div>
+      <div>
+        <input type="button" value="."  onclick="display.value += '.' ">
+        <input type="button" value="0" class="num0" onclick="display.value += '0' ">
+        <input type="button" value="&plusmn;" class="btn" onclick="negate()">
+        <input type="button" value="Enter" class="equal" onclick="display.value =eval(display.value) ">
+        
+      </div>
+      </form> 
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
